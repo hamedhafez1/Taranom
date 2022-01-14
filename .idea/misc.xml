@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/btn_drw_bottom.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/font/naskh.xml" value="0.234375" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/activity_story.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_knowledge.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_poetry.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_random_poetry.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_story.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/menu/my_navigation_items.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

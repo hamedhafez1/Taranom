@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Taranom</string>
+    <string name="app_name_fa">ترنم</string>
+    <string name="refresh">تازه‌سازی</string>
+    <string name="copy">کپی</string>
+    <string name="share">اشتراک‌گذاری</string>
+    <string name="text_copied">متن کپی شد</string>
+    <string name="dots">…</string>
+    <string name="no_connection">اتصال دستگاه به اینترنت را بررسی نمایید</string>
+    <string name="story">داستان</string>
+    <string name="short_story">داستان_کوتاه</string>
+    <string name="readPoetryInWeb">مطالعه متن کامل در وبسایت گنجور…</string>
+    <string name="knowledge">دانستنیها</string>
+    <string name="randomPoetry">شعر تصادفی</string>
+
+</resources>
