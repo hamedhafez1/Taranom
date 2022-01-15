@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="android:direction">right_to_left</item>
         <item name="fontFamily">@font/naskh</item>
+        <item name="titleCentered">true</item>
     </style>
 </resources>
