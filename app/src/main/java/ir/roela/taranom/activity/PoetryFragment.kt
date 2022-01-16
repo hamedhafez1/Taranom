@@ -9,15 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.android.volley.Request
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
-import com.google.gson.Gson
 import ir.roela.taranom.App
 import ir.roela.taranom.callback.Callback
 import ir.roela.taranom.callback.DoubleClickListener
 import ir.roela.taranom.databinding.FragmentPoetryBinding
 import ir.roela.taranom.model.Poetry
+import ir.roela.taranom.remote.GanjoorRetroHelper
+import retrofit2.Call
+import retrofit2.Response
 
 class PoetryFragment : BaseFragment() {
 
@@ -63,23 +62,25 @@ class PoetryFragment : BaseFragment() {
 
     private fun getRandomPoet() {
         try {
-            val url = "https://c.ganjoor.net/beyt-json.php"
-            val queue = Volley.newRequestQueue(requireContext())
-            val request = JsonObjectRequest(Request.Method.GET, url, null, {
-                if (isAdded) {
-                    val poetry = Gson().fromJson(it.toString(), Poetry::class.java)
-                    txtRandomPoetry.text =
-                        "${poetry.bit_1}\n${poetry.bit_2}\n\n#${poetHashtag(poetry.poet)}"
-                    txtPoetryLink.visibility = View.VISIBLE
-                    poetryLink = poetry.url
-                }
-                showLoading(false)
-            }, {
-                Log.e(App.TAG, it.message.toString())
-                txtPoetryLink.visibility = View.INVISIBLE
-                showLoading(false)
-            })
-            queue.add(request)
+            GanjoorRetroHelper().getRandomPoet()
+                .enqueue(object : retrofit2.Callback<Poetry> {
+                    override fun onResponse(call: Call<Poetry>, response: Response<Poetry>) {
+                        if (isAdded) {
+                            val poetry = response.body() as Poetry
+                            txtRandomPoetry.text =
+                                "${poetry.bit_1}\n${poetry.bit_2}\n\n#${poetHashtag(poetry.poet)}"
+                            txtPoetryLink.visibility = View.VISIBLE
+                            poetryLink = poetry.url
+                        }
+                        showLoading(false)
+                    }
+
+                    override fun onFailure(call: Call<Poetry>, t: Throwable) {
+                        Log.e(App.TAG, t.message.toString())
+                        showLoading(false)
+                    }
+
+                })
             showLoading(true)
         } catch (e: Exception) {
             Log.e(App.TAG, e.message.toString())

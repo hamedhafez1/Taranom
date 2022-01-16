@@ -11,6 +11,9 @@ import ir.roela.taranom.App
 import ir.roela.taranom.R
 import ir.roela.taranom.callback.Callback
 import ir.roela.taranom.callback.DoubleClickListener
+import ir.roela.taranom.model.Poetry
+import ir.roela.taranom.remote.CodebazanRetroHelper
+import ir.roela.taranom.remote.GanjoorRetroHelper
 import ir.roela.taranom.remote.RetroClass
 import retrofit2.Call
 import retrofit2.Response
@@ -56,9 +59,7 @@ class KnowledgeFragment : BaseFragment() {
     }
 
     private fun refreshKnowledge() {
-        val apiService = RetroClass.getApiService()
-        val call: Call<String> = apiService.getKnowledge()
-        call.enqueue(object : retrofit2.Callback<String> {
+        CodebazanRetroHelper().getRandomKnowledge().enqueue(object : retrofit2.Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (isAdded) {
                     val text = response.body().toString()

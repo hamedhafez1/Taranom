@@ -12,6 +12,7 @@ import ir.roela.taranom.R
 import ir.roela.taranom.callback.Callback
 import ir.roela.taranom.callback.DoubleClickListener
 import ir.roela.taranom.databinding.FragmentStoryBinding
+import ir.roela.taranom.remote.CodebazanRetroHelper
 import ir.roela.taranom.remote.RetroClass
 import retrofit2.Call
 import retrofit2.Response
@@ -59,9 +60,7 @@ class StoryFragment : BaseFragment() {
     }
 
     private fun getRandomStory() {
-        val apiService = RetroClass.getApiService()
-        val call: Call<String> = apiService.getStory()
-        call.enqueue(object : retrofit2.Callback<String> {
+        CodebazanRetroHelper().getRandomStory().enqueue(object : retrofit2.Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (isAdded) {
                     val text = response.body().toString()
