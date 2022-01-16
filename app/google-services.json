@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130914191330",
+    "project_id": "taranom-363b7",
+    "storage_bucket": "taranom-363b7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130914191330:android:3440854efceebcb4889bbb",
+        "android_client_info": {
+          "package_name": "ir.roela.taranom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130914191330-6v7eier3j8u9a54g5k87qhfelidqpm41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwFEF-_hRHo06Z9d7MgMkfaxZKe6SKNjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130914191330-6v7eier3j8u9a54g5k87qhfelidqpm41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

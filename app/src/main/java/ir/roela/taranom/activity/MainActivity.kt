@@ -10,12 +10,16 @@ import androidx.navigation.ui.setupWithNavController
 import ir.roela.taranom.App
 import ir.roela.taranom.R
 import ir.roela.taranom.databinding.ActivityMainBinding
+import com.google.firebase.analytics.FirebaseAnalytics
 
 
 class MainActivity : ParentActivity() {
 
+    private var mFirebaseAnalytics: FirebaseAnalytics? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         val viewBinding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(viewBinding.root)
         val toolbar = viewBinding.lytBanner
