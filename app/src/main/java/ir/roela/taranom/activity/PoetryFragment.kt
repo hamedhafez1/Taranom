@@ -15,6 +15,7 @@ import ir.roela.taranom.callback.DoubleClickListener
 import ir.roela.taranom.databinding.FragmentPoetryBinding
 import ir.roela.taranom.model.Poetry
 import ir.roela.taranom.remote.GanjoorRetroHelper
+import ir.roela.taranom.remote.RetroClass
 import retrofit2.Call
 import retrofit2.Response
 
@@ -65,7 +66,7 @@ class PoetryFragment : BaseFragment() {
             GanjoorRetroHelper().getRandomPoet()
                 .enqueue(object : retrofit2.Callback<Poetry> {
                     override fun onResponse(call: Call<Poetry>, response: Response<Poetry>) {
-                        if (isAdded) {
+                        if (isAdded && response.body() !== null) {
                             val poetry = response.body() as Poetry
                             txtRandomPoetry.text =
                                 "${poetry.bit_1}\n${poetry.bit_2}\n\n#${poetHashtag(poetry.poet)}"
@@ -76,7 +77,7 @@ class PoetryFragment : BaseFragment() {
                     }
 
                     override fun onFailure(call: Call<Poetry>, t: Throwable) {
-                        Log.e(App.TAG, t.message.toString())
+                        Log.e(App.TAG, "getRandomPoet error in api call " + t.message.toString())
                         showLoading(false)
                     }
 
