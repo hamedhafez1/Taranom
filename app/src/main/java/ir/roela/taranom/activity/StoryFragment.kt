@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ScrollView
 import android.widget.TextView
 import ir.roela.taranom.App
 import ir.roela.taranom.R
@@ -13,17 +14,16 @@ import ir.roela.taranom.callback.Callback
 import ir.roela.taranom.callback.DoubleClickListener
 import ir.roela.taranom.databinding.FragmentStoryBinding
 import ir.roela.taranom.remote.CodebazanRetroHelper
-import ir.roela.taranom.remote.RetroClass
 import retrofit2.Call
 import retrofit2.Response
 
 
 class StoryFragment : BaseFragment() {
+    private lateinit var scrollviewStory: ScrollView
     private lateinit var txtRandomStory: TextView
     private lateinit var btnRefreshStory: Button
     private lateinit var btnCopyStory: Button
     private lateinit var btnShareStory: Button
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,6 +31,7 @@ class StoryFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
         val view = FragmentStoryBinding.inflate(inflater)
+        scrollviewStory = view.scrollviewStory
         txtRandomStory = view.txtRandomStory
         btnRefreshStory = view.btnRefreshStory
         btnCopyStory = view.btnCopyStory
@@ -67,6 +68,7 @@ class StoryFragment : BaseFragment() {
                         .replace("\\<[^>]*>", "")
                         .trim()
                     txtRandomStory.text = "$text \n\n #${getString(R.string.short_story)}"
+                    scrollviewStory.fullScroll(ScrollView.FOCUS_UP)
                 }
                 showLoading(false)
             }

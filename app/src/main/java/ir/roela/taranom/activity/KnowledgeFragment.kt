@@ -11,10 +11,7 @@ import ir.roela.taranom.App
 import ir.roela.taranom.R
 import ir.roela.taranom.callback.Callback
 import ir.roela.taranom.callback.DoubleClickListener
-import ir.roela.taranom.model.Poetry
 import ir.roela.taranom.remote.CodebazanRetroHelper
-import ir.roela.taranom.remote.GanjoorRetroHelper
-import ir.roela.taranom.remote.RetroClass
 import retrofit2.Call
 import retrofit2.Response
 

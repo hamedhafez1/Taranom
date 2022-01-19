@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/about_app"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDeveloperName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:text="@string/develop_by_roela_apps"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txtContactUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/contact_us_email"
+        android:textColorLink="#888"
+        android:textDirection="rtl"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtUsedApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/used_api"
+        android:textColorLink="#888"
+        android:textDirection="rtl"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtApiCodebazan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/codebazan_api"
+        android:textColorLink="#888"
+        android:textDirection="rtl"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/txtApiGanjoor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/ganjoor_api"
+        android:textColorLink="#888"
+        android:textDirection="rtl"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -12,5 +12,18 @@
     <string name="readPoetryInWeb">مطالعه متن کامل در وبسایت گنجور…</string>
     <string name="knowledge">دانستنیها</string>
     <string name="randomPoetry">شعر تصادفی</string>
+    <string name="about_us">درباره ما</string>
+    <string name="help">راهنما</string>
+    <string name="close">بستن</string>
+    <string name="help_copy">با دوبار لمس متون می‌توانید از آنها کپی بگیرید.</string>
+    <string name="bullet_point">•</string>
+    <string name="require_internet">برای اجرای برنامه و دریافت محتوا، اتصال به اینترنت نیاز است.</string>
+    <string name="version">%1$s %2$s %3$s</string>
+    <string name="contact_us_email"><b> ارتباط با توسعه دهنده: app.roela@gmail.com</b></string>
+    <string name="develop_by_roela_apps">طراحی و توسعه Roela Apps</string>
+    <string name="used_api">منبع اطالاعات دریافتی :</string>
+    <string name="codebazan_api">codebazan.ir</string>
+    <string name="ganjoor_api">ganjoor.net</string>
+    <string name="about_app">تَرَنُم برنامه ای برای یافتن محتوای ادبی و اشتراک گذاری آن</string>
 
 </resources>
