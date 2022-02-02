@@ -5,7 +5,6 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
-import ir.roela.taranom.callback.Callback
 
 class ConnectivityStateMonitor(private val callback: Callback) :
     ConnectivityManager.NetworkCallback() {
@@ -25,17 +24,11 @@ class ConnectivityStateMonitor(private val callback: Callback) :
     }
 
     override fun onAvailable(network: Network) {
-        // Do what you need to do here
         callback.onCallback(true)
     }
 
     override fun onUnavailable() {
         callback.onCallback(false)
     }
-
-    /*override fun onLost(network: Network) {
-        callback.onCallback(false)
-    }  */
-
 
 }

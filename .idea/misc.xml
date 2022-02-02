@@ -3,17 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable-v21/notification_background.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/background.xml" value="0.36875" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/background_dark.xml" value="0.3828125" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/btn_drw_bottom.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/content_bg_border.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/divider.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/ic_baseline_content_copy_24.xml" value="0.299" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.3828125" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/ic_baseline_save_24.xml" value="0.299" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.299" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/ic_refresh_purple.xml" value="0.299" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/drawable/poem_card_bg.xml" value="0.299" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/font/naskh.xml" value="0.234375" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/about_us.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/activity_splash.xml" value="0.12222222222222222" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/activity_start.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/activity_story.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_knowledge.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_poem.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_poetry.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_random_poetry.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/fragment_story.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/help.xml" value="0.33" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/notification_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/notification_layout_expanded.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/poem_list_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/layout/setting.xml" value="0.33" />
+        <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/menu/manin_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/menu/my_navigation_items.xml" value="0.36666666666666664" />
         <entry key="..\:/dev/AndroidStudioProjects/Taranom/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.16458333333333333" />

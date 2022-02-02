@@ -9,4 +9,9 @@ class GanjoorRetroHelper {
         val apiService = RetroClass.getGanjoorApi()
         return apiService.getRandomPoet()
     }
+
+    fun getPoems(): Call<String> {
+        val apiService = RetroClass.getGanjoorApi()
+        return apiService.getPoem(0, 10)
+    }
 }

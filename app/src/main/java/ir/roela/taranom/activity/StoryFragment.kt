@@ -67,7 +67,7 @@ class StoryFragment : BaseFragment() {
                     val text = response.body().toString()
                         .replace("\\<[^>]*>", "")
                         .trim()
-                    txtRandomStory.text = "$text \n\n #${getString(R.string.short_story)}"
+                    txtRandomStory.text = fillStory(text)
                     scrollviewStory.fullScroll(ScrollView.FOCUS_UP)
                 }
                 showLoading(false)
@@ -80,6 +80,15 @@ class StoryFragment : BaseFragment() {
 
         })
         showLoading(true)
+    }
+
+    private fun fillStory(text: String): String {
+        return StringBuilder()
+            .append(text)
+            .append("\n\n")
+            .append("#")
+            .append(getString(R.string.short_story))
+            .toString()
     }
 
 }

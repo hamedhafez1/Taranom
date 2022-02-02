@@ -16,5 +16,6 @@
         <item name="android:navigationBarColor">@color/design_default_color_primary_dark</item>
         <item name="fontFamily">@font/naskh</item>
         <item name="titleCentered">true</item>
+        <item name="android:windowBackground">@drawable/background</item>
     </style>
 </resources>

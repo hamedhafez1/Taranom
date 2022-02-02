@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="ir.roela.taranom.activity.PoetryFragment"
+        android:name="ir.roela.taranom.activity.PoemFragment"
         android:label="@string/randomPoetry"
-        tools:layout="@layout/fragment_poetry" />
+        tools:layout="@layout/fragment_poem" />
 
     <fragment
         android:id="@+id/navigation_story"

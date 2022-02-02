@@ -9,7 +9,7 @@
     <string name="no_connection">اتصال دستگاه به اینترنت را بررسی نمایید</string>
     <string name="story">داستان</string>
     <string name="short_story">داستان_کوتاه</string>
-    <string name="readPoetryInWeb">مطالعه متن کامل در وبسایت گنجور…</string>
+    <string name="readPoetryInWeb"><u>مطالعه متن کامل…</u></string>
     <string name="knowledge">دانستنیها</string>
     <string name="randomPoetry">شعر تصادفی</string>
     <string name="about_us">درباره ما</string>
@@ -25,5 +25,15 @@
     <string name="codebazan_api">codebazan.ir</string>
     <string name="ganjoor_api">ganjoor.net</string>
     <string name="about_app">تَرَنُم برنامه ای برای یافتن محتوای ادبی و اشتراک گذاری آن</string>
-
+    <string name="poetry_text">%1$s\n\u2748\u2748\u2748\n%2$s\n\n#%3$s</string>
+    <string name="connecting">در حال اتصال</string>
+    <string name="show_hashtag">کپی کردن شناسه های دلخواه زیر در انتهای شعر</string>
+    <string name="setting">تنظیمات</string>
+    <string name="sub_content_desc_setting">شناسه کانال یا صفحه خود را وارد کنید تا در هنگام اشتراک گذاری در انتهای متن کپی شده قرار گیرد.\n این قسمت می‌تواند شامل هشتگ های دلخواه ، شناسه ها یا شکلک های دلخواه شما باشد.(این قسمت فعلا برای اشتراک شعرها فعال است)</string>
+    <string name="sub_content_desc_setting_help"><mark>•پس از انجام تغییرات کلید ذخیره را بزنید.</mark></string>
+    <string name="sub_content_desc_setting_hint"><span>@your_channel_id\n#شعر\n🌹</span></string>
+    <string name="save">ذخیره</string>
+    <string name="saved">ذخیره شد</string>
+    <string name="space"><span hidden="true">تَرَنُم</span></string>
+    <string name="splash_subtitle">نوید عشق آید زان تَرَنُم</string>
 </resources>

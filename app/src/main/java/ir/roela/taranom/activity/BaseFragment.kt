@@ -7,6 +7,9 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
@@ -17,16 +20,34 @@ import ir.roela.taranom.App
 import ir.roela.taranom.R
 import ir.roela.taranom.callback.Callback
 import ir.roela.taranom.callback.ConnectivityStateMonitor
+import ir.roela.taranom.callback.SettingCallback
+import ir.roela.taranom.utils.Preference
+import ir.roela.taranom.view.MyAlertDialog
 
 abstract class BaseFragment : Fragment() {
 
     protected var progressLoadData: ContentLoadingProgressBar? = null
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_help -> {
+                showHelp()
+            }
+            R.id.menu_about_us -> {
+                showAboutUs()
+            }
+            R.id.menu_setting -> {
+                showSetting()
+            }
+        }
+        return true
+    }
+
     protected fun checkNetWorkConnection(callback: Callback) {
-//        if (App.isNetworkConnected(requireContext())) {
-//            callback.onCallback(true)
-//        } else {
-//            showSnackBar(R.string.no_connection)
         ConnectivityStateMonitor(object : Callback {
             override fun onCallback(any: Any?) {
                 if (any == true) {
@@ -36,9 +57,7 @@ abstract class BaseFragment : Fragment() {
                 }
             }
         }).enable(requireContext())
-//        }
     }
-
 
     protected fun showLoading(state: Boolean) {
         if (isAdded)
@@ -56,9 +75,10 @@ abstract class BaseFragment : Fragment() {
 
     protected fun copyDataToClipBoard(text: CharSequence) {
         if (text.length > 4) {
+            val shareText = createContentForShare(text)
             val clipboard: ClipboardManager =
                 requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("Text Copied!", text.trim().toString())
+            val clip = ClipData.newPlainText("Text Copied!", shareText)
             clipboard.setPrimaryClip(clip)
             showSnackBar(R.string.text_copied)
         }
@@ -66,11 +86,27 @@ abstract class BaseFragment : Fragment() {
 
     protected fun shareText(text: CharSequence) {
         if (text.length > 4) {
+            val shareText = createContentForShare(text)
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/plain"
-            intent.putExtra(Intent.EXTRA_TEXT, text.trim().toString())
+            intent.putExtra(Intent.EXTRA_TEXT, shareText)
             startActivity(Intent.createChooser(intent, "اشتراک گذاری با"))
         }
+    }
+
+    private fun createContentForShare(text: CharSequence): String {
+        val stringBuilder = StringBuilder()
+        stringBuilder.append(text.trim().toString())
+        stringBuilder.append("\n\n")
+        stringBuilder.append(getSubContentDesc())
+        return stringBuilder.toString()
+    }
+
+    private fun getSubContentDesc(): String {
+        val desc = App.prefs.getStringPreference(Preference.PType.SubContentDesc)
+        return if (desc !== null) {
+            desc
+        } else ""
     }
 
     protected fun showSnackBar(text: Int) {
@@ -87,11 +123,28 @@ abstract class BaseFragment : Fragment() {
                 textView.textSize = 14F
                 snackBar.show()
             } else {
-                Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
             }
         } catch (e: Exception) {
             Log.e(App.TAG, e.message.toString())
-            Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), text, Toast.LENGTH_SHORT).show()
         }
     }
+
+    private fun showHelp() {
+        MyAlertDialog(requireContext()).showHelpDialog()
+    }
+
+    private fun showAboutUs() {
+        MyAlertDialog(requireContext()).showAboutUsDialog()
+    }
+
+    private fun showSetting() {
+        MyAlertDialog(requireContext()).showSettingDialog(object : SettingCallback {
+            override fun onSubDescChange() {
+                showSnackBar(R.string.saved)
+            }
+        })
+    }
+
 }

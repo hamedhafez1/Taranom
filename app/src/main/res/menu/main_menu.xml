@@ -6,6 +6,10 @@
         android:title="@string/help" />
 
     <item
+        android:id="@+id/menu_setting"
+        android:title="@string/setting" />
+
+    <item
         android:id="@+id/menu_about_us"
         android:title="@string/about_us" />
 
